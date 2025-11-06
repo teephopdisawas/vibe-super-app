@@ -6,6 +6,8 @@
 
 A comprehensive productivity and AI-powered application featuring multiple tools and capabilities powered by Google's Gemini API.
 
+**Built with AI Assistance**: This application was developed with the help of Claude (Anthropic) and powered by Google's Gemini API.
+
 View your app in AI Studio: https://ai.studio/apps/drive/10AEt8diPgZzSP099IQeFjV2g4FSFbtJH
 
 ## Features
@@ -61,3 +63,12 @@ View your app in AI Studio: https://ai.studio/apps/drive/10AEt8diPgZzSP099IQeFjV
 - **Styling**: Tailwind CSS
 - **AI**: Google Generative AI (@google/genai)
 - **Models**: Gemini 2.5-flash, Imagen-4.0
+
+## Development Credits
+
+This application was built with the collaborative power of AI:
+
+- **Claude (Anthropic)**: Used for application development, code generation, and architecture design
+- **Google Gemini API**: Powers all AI features within the application including text generation, image creation, code assistance, data analysis, and problem solving
+
+The combination of Claude's development capabilities and Gemini's runtime AI features demonstrates the potential of AI-assisted development and AI-powered user experiences.

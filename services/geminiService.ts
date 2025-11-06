@@ -93,3 +93,69 @@ export const searchWithGoogle = async (prompt: string) => {
         sources: groundingChunks
     };
 };
+
+// Word Processor Services
+export const improveText = async (text: string) => {
+  return ai.models.generateContentStream({
+    model: "gemini-2.5-flash",
+    contents: `Improve the following text by fixing grammar, enhancing clarity, and making it more professional while keeping the same meaning:\n\n${text}`,
+  });
+};
+
+export const summarizeText = async (text: string) => {
+  return ai.models.generateContentStream({
+    model: "gemini-2.5-flash",
+    contents: `Provide a concise summary of the following text:\n\n${text}`,
+  });
+};
+
+export const rewriteText = async (text: string) => {
+  return ai.models.generateContentStream({
+    model: "gemini-2.5-flash",
+    contents: `Rewrite the following text in a different style while maintaining its core message:\n\n${text}`,
+  });
+};
+
+// Spreadsheet Services
+export const analyzeSpreadsheetData = async (data: string) => {
+  return ai.models.generateContentStream({
+    model: "gemini-2.5-flash",
+    contents: `Analyze the following spreadsheet data and provide insights, patterns, trends, or suggestions:\n\n${data}`,
+  });
+};
+
+// Presentation Services
+export const generatePresentation = async (topic: string) => {
+  const response = await ai.models.generateContent({
+    model: "gemini-2.5-flash",
+    contents: `Create a presentation outline for the topic: "${topic}". Generate 5-7 slides with titles and content.`,
+    config: {
+      responseMimeType: "application/json",
+      responseSchema: {
+        type: Type.ARRAY,
+        items: {
+          type: Type.OBJECT,
+          properties: {
+            id: { type: Type.NUMBER },
+            title: { type: Type.STRING },
+            content: { type: Type.STRING },
+            notes: { type: Type.STRING }
+          },
+        }
+      },
+    },
+  });
+
+  return JSON.parse(response.text);
+};
+
+// Calculator Services
+export const solveMathProblem = async (problem: string) => {
+  return ai.models.generateContentStream({
+    model: "gemini-2.5-flash",
+    contents: `Solve the following math problem step by step, showing all work:\n\n${problem}`,
+    config: {
+      systemInstruction: "You are an expert mathematics tutor. Provide clear, step-by-step solutions to math problems. Show all your work and explain each step."
+    }
+  });
+};

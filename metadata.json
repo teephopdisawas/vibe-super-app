@@ -1,5 +1,5 @@
 {
   "name": "Gemini Super App",
-  "description": "A versatile 'super app' demonstrating various Gemini API capabilities, including text and image generation, code assistance, travel planning, and grounded search, all within a sleek, unified interface.",
+  "description": "A versatile 'super app' demonstrating various Gemini API capabilities, including text and image generation, code assistance, travel planning, grounded search, and productivity tools (word processor, spreadsheet, presentations, calculator with AI assistance), all within a sleek, unified interface.",
   "requestFramePermissions": []
 }

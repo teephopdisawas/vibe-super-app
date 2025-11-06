@@ -6,6 +6,10 @@ import ImageSpark from './features/ImageSpark';
 import CodeCompanion from './features/CodeCompanion';
 import TravelPlanner from './features/TravelPlanner';
 import KnowledgeSeeker from './features/KnowledgeSeeker';
+import WordProcessor from './features/WordProcessor';
+import Spreadsheet from './features/Spreadsheet';
+import PresentationMaker from './features/PresentationMaker';
+import Calculator from './features/Calculator';
 
 const App: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState<Feature>(Feature.StoryWeaver);
@@ -22,6 +26,14 @@ const App: React.FC = () => {
         return <TravelPlanner />;
       case Feature.KnowledgeSeeker:
         return <KnowledgeSeeker />;
+      case Feature.WordProcessor:
+        return <WordProcessor />;
+      case Feature.Spreadsheet:
+        return <Spreadsheet />;
+      case Feature.PresentationMaker:
+        return <PresentationMaker />;
+      case Feature.Calculator:
+        return <Calculator />;
       default:
         return <div className="text-base-content dark:text-dark-content">Select a feature</div>;
     }

@@ -5,6 +5,10 @@ export enum Feature {
   CodeCompanion = 'CodeCompanion',
   TravelPlanner = 'TravelPlanner',
   KnowledgeSeeker = 'KnowledgeSeeker',
+  WordProcessor = 'WordProcessor',
+  Spreadsheet = 'Spreadsheet',
+  PresentationMaker = 'PresentationMaker',
+  Calculator = 'Calculator',
 }
 
 export interface DayPlan {
